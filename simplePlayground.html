@@ -53,17 +53,17 @@
 <body>
     <!-- This section is for Text examples -->
     <section>
-        <h1>Text</h>
+        <h1>Text</h1>
         <p>This section demonstrates the <b>Inline text semantics</b></p>
-
         <div class="product">
             <img src="images/sample-image.jpg" alt="Product Image" title="Product model Ib874" />
             <h2>Tesla Ib874</h2>
             <p>
-                This car uses the best cutting-edge technology ever seen. <br>
-                From <a href="https://en.wikipedia.org/wiki/Tesla_Autopilot" target="_blank">autopilot</a> to almost
-                unlimited electric battery for clean, fast and autonomous driving.
+                This car uses the best <em>cutting-edge</em> technology ever seen. <br>
+                From <a href="https://en.wikipedia.org/wiki/Tesla_Autopilot" target="_blank"><em>autopilot</em></a> to almost
+                <em>unlimited</em> electric battery for <em>clean</em>, fast and autonomous driving.
             </p>
+            <img src="images/gncap.jpg" alt="Product image">
             <p>
                 Before: <span class="before-price">$999</span>
             </p>
@@ -71,32 +71,56 @@
                 Now: <span class="current-price">$800</span>
             </p>
             <button>Buy now</button>
+        </div class="product">
+        <div class="product">
+        <img src="images/sample-image.jpg" alt="This car have 5 stars rating on GNCAP" title="This car have 5 stars rating on GNCAP" />
+        <h2>Tesla IH125</h2>
+        <p>
+            This is a smaller version of the Ib874 but with almost the
+            same capabilities.<br>
+            <a href="https://en.wikipedia.org/wiki/Self-driving_car">autonomous driving</a>  
+        </p>
+        <img src="images/gncap.jpg" alt="Product image">
+        <p>
+            Before: <span class="before-price">$500</span>
+        </p>
+        <p>
+            Now: <span class="current-price">$400</span>
+        </p>
+        <button>Buy now</button>
         </div>
     </section>
+
 
     <!-- This section is for List examples -->
     <section>
         <h1>List</h1>
         <h3>Calls procedure checklist</h3>
         <ol>
-            <li><br>Answer</b> call</li>
-            <li><b>Ask</b> for insurance</li>
-            <lr><b>Ask</b> for injuries</li>
-            <li><b>Find</b> a doctor nearby</li>
+            <li><b>Answer</b> call</li>
+            <li><b>Ask</b> for <em>insurance</em></li>
+            <li><b>Ask</b> for injuries</li>
+            <li><b>Find</b> a doctor <em>nearby</em></li>
             <li>
                 Complaint procedure
-                <ul>
+                <ol>
                     <li>Fill complaint form</li>
-                    <li>Call boss</li>
                     <li>Hangout</li>
-                </ul>
+                    <li>Call boss</li>
+                </ol>
             </li>
         </ol>
         <h3>TODO List</h3>
         <ul>
-            <li>Call Mom</li>
-            <lt>Buy tickets</lt>
-            <li>Do homework</li>
+            <li><s>Call Mom</s></li>
+            <li><del>Buy tickets</del></lt>
+            <li>Do homework
+                <ul>
+                    <li>English exercises</li>
+                    <li>FED excercises</li>
+                    <li>Read about HTML syntax</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
@@ -108,9 +132,10 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <ts>Company</ts>
+                    <th>Company</th>
                     <th>E-Mail</th>
                     <th>Phone</th>
+                    <th>Age</th>
                 </tr>
             </thead>
             <tbody>
@@ -119,12 +144,21 @@
                     <td>Facebook</td>
                     <td>john.doe@facebook.com</td>
                     <td>1579532154</td>
+                    <td>24</td>
                 </tr>
                 <tr>
                     <td>Karen Roik</td>
                     <td>Google</td>
                     <td>karen.roik@google.com</td>
                     <td>9846121541</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Dann Reely</td>
+                    <td>Microsoft</td>
+                    <td>dann.reely@microsoft.com</td>
+                    <td>7512156543</td>
+                    <td>34</td>
                 </tr>
             </tbody>
         </table>
@@ -133,7 +167,7 @@
         <table class="colors-table">
             <thead>
                 <tr>
-                    <th colspan="4">CSS Colors</th>
+                    <th colspan="5">CSS Colors</th>
                 </tr>
             </thead>
             <tbody>
@@ -144,7 +178,7 @@
                     <th>Decimal Code<br>(R,G,B)</th>
                 </tr>
                 <tr>
-                    <td rowspan="12">Yellow</td>
+                    <td rowspan="10">Yellow</td>
                     <td style="background:lightyellow;">&nbsp;</td>
                     <td>lightyellow</td>
                     <td>#FFFFE0</td>
@@ -155,12 +189,6 @@
                     <td>lemonchiffon</td>
                     <td>#FFFACD</td>
                     <td>rgb(255,250,205)</td>
-                </tr>
-                <tr>
-                    <td style="background:navy;">&nbsp;</td>
-                    <td>navy</td>
-                    <td>#000080</td>
-                    <td>rgb(0,0,128)</td>
                 </tr>
                 <tr>
                     <td style="background:lightgoldenrodyellow;">&nbsp;</td>
@@ -181,28 +209,22 @@
                     <td>rgb(255,228,181)</td>
                 </tr>
                 <tr>
-                    <td style="background:midnightblue;">&nbsp;</td>
-                    <td>midnightblue</td>
-                    <td>#191970</td>
-                    <td>rgb(25,25,112)</td>
-                </tr>
-                <tr>
-                    <td style="background:mediumslateblue;">&nbsp;</td>
-                    <td>mediumslateblue</td>
-                    <td>#7B68EE</td>
-                    <td>rgb(123,104,238)</td>
-                </tr>
-                <tr>
                     <td style="background:peachpuff;">&nbsp;</td>
                     <td>peachpuff</td>
                     <td>#FFDAB9</td>
-                    <td>rgb(255,218,185)</td>
+                    <td>rgb(255,218,185)<kha/td>
                 </tr>
                 <tr>
                     <td style="background:palegoldenrod;">&nbsp;</td>
                     <td>palegoldenrod</td>
                     <td>#EEE8AA</td>
                     <td>rgb(238,232,170)</td>
+                </tr>
+                <tr>
+                    <td style="background:khaki;">&nbsp;</td>
+                    <td>khaki</td>
+                    <td>#F0E68C</td>
+                    <td>rgb(240,230,140)</td>
                 </tr>
                 <tr>
                     <td style="background:darkkhaki;">&nbsp;</td>
@@ -217,7 +239,7 @@
                     <td>rgb(255,255,0)</td>
                 </tr>
                 <tr>
-                    <td rowspan="16">Blue</td>
+                    <td rowspan="18">Blue</td>
                     <td style="background:powderblue;">&nbsp;</td>
                     <td>powderblue</td>
                     <td>#B0E0E6</td>
@@ -242,16 +264,16 @@
                     <td>rgb(135,206,235)</td>
                 </tr>
                 <tr>
-                    <td style="background:deepskyblue;">&nbsp;</td>
-                    <td>deepskyblue</td>
-                    <td>#00BFFF</td>
-                    <td>rgb(0,191,255)</td>
-                </tr>
-                <tr>
                     <td style="background:lightsteelblue;">&nbsp;</td>
                     <td>lightsteelblue</td>
                     <td>#B0C4DE</td>
                     <td>rgb(176,196,222)</td>
+                </tr>
+                <tr>
+                    <td style="background:deepskyblue;">&nbsp;</td>
+                    <td>deepskyblue</td>
+                    <td>#00BFFF</td>
+                    <td>rgb(0,191,255)</td>
                 </tr>
                 <tr>
                     <td style="background:dodgerblue;">&nbsp;</td>
@@ -284,10 +306,10 @@
                     <td>rgb(0,0,255)</td>
                 </tr>
                 <tr>
-                    <td style="background:khaki;">&nbsp;</td>
-                    <td>khaki</td>
-                    <tl>#F0E68C</tl>
-                    <td>rgb(240,230,140)</td>
+                    <td style="background:navy;">&nbsp;</td>
+                    <td>navy</td>
+                    <td>#000080</td>
+                    <td>rgb(0,0,128)</td>
                 </tr>
                 <tr>
                     <td style="background:mediumblue;">&nbsp;</td>
@@ -302,6 +324,18 @@
                     <td>rgb(0,0,139)</td>
                 </tr>
                 <tr>
+                    <td style="background:midnightblue;">&nbsp;</td>
+                    <td>midnightblue</td>
+                    <td>#191970</td>
+                    <td>rgb(25,25,112)</td>
+                </tr>
+                <tr>
+                    <td style="background:mediumslateblue;">&nbsp;</td>
+                    <td>mediumslateblue</td>
+                    <td>#7B68EE</td>
+                    <td>rgb(123,104,238)</td>
+                </tr>
+                <tr>
                     <td style="background:slateblue;">&nbsp;</td>
                     <td>slateblue</td>
                     <td>#6A5ACD</td>
@@ -311,7 +345,32 @@
                     <td style="background:darkslateblue;">&nbsp;</td>
                     <td>darkslateblue</td>
                     <td>#483D8B</td>
-                    <tl>rgb(72,61,139)</tl>
+                    <td>rgb(72,61,139)</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Red</td>
+                    <td style="background:Crimson;">&nbsp;</td>
+                    <td>Crimson</td>
+                    <td> #DC143C</td>
+                    <td>rgb(220,20,60)</td>
+                </tr>
+                <tr>
+                    <td style="background:red;">&nbsp;</td>
+                    <td>Red</td>
+                    <td> #FF0000</td>
+                    <td>rgb(255,0,0)</td>
+                </tr>
+                <tr>
+                    <td style="background: FireBrick;">&nbsp;</td>
+                    <td>FireBrick</td>
+                    <td> #B22222</td>
+                    <td>rgb(178,34,34)</td>
+                </tr>
+                <tr>
+                    <td style="background:DarkRed;">&nbsp;</td>
+                    <td>DarkRed</td>
+                    <td> #8B0000</td>
+                    <td>rgb(139,0,0)</td>
                 </tr>
             </tbody>
         </table>
@@ -332,10 +391,13 @@
                 <option value="">--Please choose an option--</option>
                 <option value="happy">Happy</option>
                 <option value="sad">Sad</option>
+                <option value="angry">angry</option>
+                <option value="anxious">anxious</option>
+                <option value="Excited">Excited</option>
             </selection>
             <br>
             <label for="message">Message:</label>
-            <areatext id="message" placeholder="What's on your mind?"></areatext>
+            <areatext id="message" placeholder="This is my mood today!"></areatext>
             <br>
             <button type="submit">Send message</button>
         </form>
