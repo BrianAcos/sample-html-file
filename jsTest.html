@@ -90,7 +90,7 @@
                 quantity: 2
             }
         ];
-        
+
         // Agregar producto a la cansta 
         products.push({
             name: 'Cookies',
@@ -98,9 +98,19 @@
             quantity: 3
         });
 
-        //Ordenar alfabeticamente productos de la canasta (no funciona)
+        //Ordenar alfabeticamente productos de la canasta 
         products.sort(function (a, b) {
-        return products;
+            var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+            var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+
+            // names must be equal
+            return 0;
         });
 
         const createCellWithText = (text) => {
@@ -142,11 +152,11 @@
         //Metodo para el descuento del subtotal
         const calculateDiscount = (subtotal) => {
             if (cantidadProductos > 5) {
-                return subtotal * 0.15
+                return Math.round(subtotal * 0.15 * 10) / 10;
             } else if (subtotal >= 100) {
-                return subtotal * 0.1;
+                return Math.round(subtotal * 0.1 * 10) / 10;
             } else {
-                return subtotal * 0.05;
+                return Math.round(subtotal * 0.05 * 10) / 10;
             }
         }
 
@@ -154,8 +164,8 @@
         const drawTotals = () => {
             const subTotal = calculateSubTotal();
             const discount = calculateDiscount(subTotal);
-            const taxes = (subTotal - discount) * TAXES;
-            const total = (subTotal - discount + taxes);
+            const taxes = Math.round((subTotal - discount) * TAXES * 10) / 10;
+            const total = subTotal - discount + taxes;
             document.querySelector('.totals .subtotal').textContent = subTotal;
             document.querySelector('.totals .discount').textContent = discount;
             document.querySelector('.totals .taxes').textContent = taxes;
