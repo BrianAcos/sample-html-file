@@ -73,14 +73,17 @@ const drawTable = () => {
         quantityInput.classList.add('form-control')
         quantityCell.appendChild(quantityInput);
         row.appendChild(quantityCell);
-        
+
         // recalcular totales cada ves que se cambia la cantidad
+        // if: la cantidad de productos no puede bajar de 0
         quantityInput.addEventListener('change', () => {
             product.quantity = quantityInput.value;
             drawTotals();
-            
+            if (product.quantity <= 0) {
+                quantityInput.value = 0;
+                console.log('0 productos');
+            }
         });
-
 
         const subtotalCell = createCellWithText(product.price * product.quantity);
         row.appendChild(subtotalCell);
@@ -99,6 +102,19 @@ const drawTable = () => {
 
         tableBody.appendChild(row);
     });
+}
+
+//si no hay productos mostrar mensaje
+var CantidadProductos = products.length;
+console.log(CantidadProductos);
+var CantidadProductos = () => {
+    CantidadProductos.addEventListener('change', () => {
+        CantidadProductos = products.length;
+        console.log(CantidadProductos);
+        if (CantidadProductos == 0) {
+            console.log('holaaaa');
+        }
+    })
 }
 
 const calculateSubTotal = () => {
