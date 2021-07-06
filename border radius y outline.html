@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            margin: 10px;
+            font-size: 40px;
+            border: 1px solid black;
+
+            
+
+
+        }
+        .uno h1 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            outline-color: red;
+            outline-style: solid;
+            outline-width: 5px;
+            outline-offset: 0px;
+
+        }
+
+        .dos h1 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .tres h1 {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            outline-offset: 5px; 
+            outline-color: red;
+            outline-style: solid;
+            outline-width: 5px;  
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-4 uno">
+
+                <h1>HOLA</h1>
+                <ul>
+                    <li>el outline se define al igual que el border y va por fuera del borde</li>
+                    <li>primero se define el borde y luego se define el border radius</li>
+                    <li>es necesario definir el borde para que funcione el border radius</li>
+                </ul>
+            </div>
+            <div class="col col-4 dos">
+
+                <h1>HOLA</h1>
+                 <ul>
+                     <li>se quito el outline</li>
+                     <li>se puede definir cada uno de los bordes en este caso borde arriba izquierda y arriba derecha</li>
+                 </ul>
+            </div>
+            <div class="col col-4 tres">
+
+                <h1>HOLA</h1>
+                <ul>
+                    <li>con el offset se puede separ el outline del borde sin modificarlo</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row">
+
+
+        </div>
+
+    </div>
+
+</body>
